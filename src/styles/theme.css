@@ -1,0 +1,159 @@
+/* Import individual theme files */
+@import './themes/claude.css';
+@import './themes/neobrutualism.css';
+@import './themes/supabase.css';
+@import './themes/vercel.css';
+@import './themes/reading.css';
+@import './themes/notebook.css';
+
+body {
+  @apply overscroll-none;
+}
+
+:root {
+  --header-height: calc(var(--spacing, 0.25rem) * 12 + 1px);
+}
+
+/* Apply theme fonts to body for all themes */
+/* This ensures theme-specific fonts override Next.js font variables */
+/* Font variables are defined on [data-theme] (html element) */
+/* We need to override Next.js font variables on body to use html's values */
+/* Using initial removes the property, allowing parent (html) values to cascade */
+[data-theme] body {
+  /* Remove Next.js font variables to allow theme variables from html to cascade */
+  --font-sans: initial;
+  --font-mono: initial;
+  --font-serif: initial;
+  /* Apply font-family - will now resolve from html's [data-theme] variables */
+  font-family: var(--font-sans);
+}
+
+.theme-scaled {
+  @media (min-width: 1024px) {
+    --radius: 0.6rem;
+    --text-lg: 1.05rem;
+    --text-base: 0.85rem;
+    --text-sm: 0.8rem;
+    --spacing: 0.222222rem;
+  }
+
+  [data-slot='card'] {
+    --spacing: 0.16rem;
+  }
+
+  [data-slot='select-trigger'],
+  [data-slot='toggle-group-item'] {
+    --spacing: 0.222222rem;
+  }
+}
+
+[data-theme].theme-default,
+[data-theme].theme-default-scaled {
+  --primary: var(--color-neutral-600);
+  --primary-foreground: var(--color-neutral-50);
+
+  @variant dark {
+    --primary: var(--color-neutral-500);
+    --primary-foreground: var(--color-neutral-50);
+  }
+}
+
+[data-theme].theme-blue,
+[data-theme].theme-blue-scaled {
+  --primary: var(--color-blue-600);
+  --primary-foreground: var(--color-blue-50);
+
+  @variant dark {
+    --primary: var(--color-blue-500);
+    --primary-foreground: var(--color-blue-50);
+  }
+}
+
+[data-theme].theme-cyan,
+[data-theme].theme-cyan-scaled {
+  --primary: var(--color-cyan-600);
+  --primary-foreground: var(--color-cyan-50);
+
+  @variant dark {
+    --primary: var(--color-cyan-500);
+    --primary-foreground: var(--color-cyan-50);
+  }
+}
+
+[data-theme].theme-purple,
+[data-theme].theme-purple-scaled {
+  --primary: var(--color-purple-600);
+  --primary-foreground: var(--color-purple-50);
+
+  @variant dark {
+    --primary: var(--color-purple-500);
+    --primary-foreground: var(--color-purple-50);
+  }
+}
+
+[data-theme].theme-violet,
+[data-theme].theme-violet-scaled {
+  --primary: var(--color-violet-600);
+  --primary-foreground: var(--color-violet-50);
+
+  @variant dark {
+    --primary: var(--color-violet-500);
+    --primary-foreground: var(--color-violet-50);
+  }
+}
+
+[data-theme].theme-green,
+[data-theme].theme-green-scaled {
+  --primary: var(--color-lime-600);
+  --primary-foreground: var(--color-lime-50);
+
+  @variant dark {
+    --primary: var(--color-lime-600);
+    --primary-foreground: var(--color-lime-50);
+  }
+}
+
+[data-theme].theme-amber,
+[data-theme].theme-amber-scaled {
+  --primary: var(--color-amber-600);
+  --primary-foreground: var(--color-amber-50);
+
+  @variant dark {
+    --primary: var(--color-amber-500);
+    --primary-foreground: var(--color-amber-50);
+  }
+}
+
+[data-theme].theme-rose,
+[data-theme].theme-rose-scaled {
+  --primary: var(--color-rose-600);
+  --primary-foreground: var(--color-rose-50);
+
+  @variant dark {
+    --primary: var(--color-rose-500);
+    --primary-foreground: var(--color-rose-50);
+  }
+}
+
+[data-theme].theme-orange,
+[data-theme].theme-orange-scaled {
+  --primary: var(--color-orange-600);
+  --primary-foreground: var(--color-orange-50);
+
+  @variant dark {
+    --primary: var(--color-orange-500);
+    --primary-foreground: var(--color-orange-50);
+  }
+}
+
+[data-theme].theme-reading,
+[data-theme].theme-reading-scaled {
+  --font-sans: var(--font-serif, 'Amiri', Georgia, serif);
+  --primary: oklch(0.48 0.06 55);
+  --primary-foreground: oklch(0.97 0.005 85);
+
+  @variant dark {
+    --primary: oklch(0.72 0.06 60);
+    --primary-foreground: oklch(0.18 0.01 55);
+  }
+}

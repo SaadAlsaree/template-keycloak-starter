@@ -1,0 +1,55 @@
+{
+  "common": {
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "search": "بحث",
+    "loading": "جاري التحميل...",
+    "profile": "الملف الشخصي",
+    "logout": "تسجيل الخروج",
+    "submit": "إرسال",
+    "back": "رجوع",
+    "next": "التالي",
+    "previous": "السابق",
+    "close": "إغلاق",
+    "confirm": "تأكيد",
+    "yes": "نعم",
+    "no": "لا",
+    "actions": "إجراءات",
+    "view": "عرض",
+    "create": "إنشاء",
+    "update": "تحديث",
+    "export": "تصدير",
+    "import": "استيراد",
+    "refresh": "تحديث",
+    "noData": "لا توجد بيانات",
+    "error": "حدث خطأ ما",
+    "success": "تم بنجاح",
+    "warning": "تحذير",
+    "info": "معلومات"
+  },
+  "nav": {
+    "dashboard": "لوحة التحكم"
+  },
+  "auth": {
+    "signIn": "تسجيل الدخول",
+    "signOut": "تسجيل الخروج",
+    "signUp": "إنشاء حساب"
+  },
+  "validation": {
+    "required": "هذا الحقل مطلوب",
+    "email": "يرجى إدخال عنوان بريد إلكتروني صالح",
+    "minLength": "يجب أن يكون على الأقل {{min}} حرف",
+    "maxLength": "يجب ألا يتجاوز {{max}} حرف"
+  },
+  "dataTable": {
+    "search": "بحث...",
+    "filter": "تصفية",
+    "clearFilters": "مسح الفلاتر",
+    "rowsPerPage": "صفوف في الصفحة",
+    "noResults": "لا توجد نتائج",
+    "of": "من",
+    "page": "صفحة"
+  }
+}
